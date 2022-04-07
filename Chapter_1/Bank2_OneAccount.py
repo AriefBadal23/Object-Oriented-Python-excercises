@@ -1,13 +1,9 @@
 # Bank 2
 # Single account
 
-
-
 account_name = ''
 account_balance = 0
 account_password = ''
-
-
 
 def new_account(name, balance, password):
     global account_name, account_balance, account_password
@@ -19,9 +15,9 @@ def new_account(name, balance, password):
 
 def show():
     global account_name, account_balance, account_password
-    print('   Name', account_name)
-    print('   Balance', account_balance)
-    print('   Password', account_password)
+    print(' Name', account_name)
+    print(' Balance', account_balance)
+    print(' Password', account_password)
     print()
 
 def get_balance(password):
@@ -109,9 +105,9 @@ while True:
 
     elif action == 's':
         print('Show')
-        print('       Name', account_name)
-        print('       Balance:', account_balance)
-        print('       Password:', account_password)
+        print(' Name', account_name)
+        print(' Balance:', account_balance)
+        print(' Password:', account_password)
         print()
 
     elif action == 'q':
