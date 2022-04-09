@@ -36,6 +36,7 @@ def deposit(accountnumber, amounttodeposit, password):
     if password != accountpasswordList[accountnumber]:
         print('Incorrect password')
         return None
+
     accountbalanceList[accountnumber] = accountbalanceList[accountnumber] + amounttodeposit
     return accountbalanceList[accountnumber]
     
@@ -87,6 +88,18 @@ while True:
         the_balance = getBalance(useraccountnumber, userpasword)
         if the_balance is not None:
             print('Your balance is:', the_balance)
+
+    elif action == 'd':
+        print('Deposit:')
+        useraccount_number= input('Please enter the account number: ')
+        useraccountnumber = int(useraccountnumber)
+        userdeposit_amount = input('Please enter amount to deposit: ')
+        userdeposit_amount = int(userdeposit_amount)
+        userPassword = input('Please enter the password: ')
+
+        newBalance = deposit(useraccountnumber, userdeposit_amount, userPassword)
+        if newBalance is not None:
+            print('Your new balance is:', newBalance)
 
     elif action == 'n':
         print('New Account:')
