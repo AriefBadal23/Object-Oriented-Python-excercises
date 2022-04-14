@@ -10,7 +10,7 @@ class Tv:
         self.nChannels = len(self.channelList)
         self.channelIndex = 0
         self.VOLUME_MINIMUM = 0
-        self.VOLUME_MAXIMUM = 0
+        self.VOLUME_MAXIMUM = 10
         self.volume = self.VOLUME_MAXIMUM // 2  # integer divide
 
     def power(self):
