@@ -11,6 +11,7 @@ accounts_list.append(oAccount)
 print("Joe's account number is 0")
 
 oAccount = Account('Mary', 1234, 'MarysPassword')
+# oAccount is a  temprorary variable and can be used again for another account object
 accounts_list.append(oAccount)
 print("Mary's account number is 1")
 
