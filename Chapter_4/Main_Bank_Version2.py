@@ -21,7 +21,7 @@ print()
 
 
 # Call some methods on the different account
-print('Calling method of the two account...')
+print('Calling methods of the two accounts...')
 accounts_list[0].deposit(50, 'JoesPassword')
 accounts_list[1].withdraw(345, 'MarysPassword')
 accounts_list[1].deposit(100, 'MarysPassword')
