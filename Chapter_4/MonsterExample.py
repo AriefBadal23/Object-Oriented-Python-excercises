@@ -11,4 +11,27 @@ class Monster():
         # Set other instance variables like health, power, etc.
 
         def move(self):
-            self.my_Row = (self.my_Row = self.mySpeedY) % self.n_rows
+            self.my_Row = (self.my_Row + self.mySpeedY) % self.n_rows
+            self.my_Col = (self.my_Col + self.mySpeedX) % self.n_cols
+
+
+N_MONSTERS = 20
+N_ROWS = 100
+N_COLS = 200
+MAX_SPEED = 4
+
+
+
+monsterlist = [] # start with an empty list
+for i in range(N_MONSTERS):
+    oMonster = Monster(N_ROWS, N_ROWS, MAX_SPEED) # create a monster
+    monsterlist.append(oMonster) # add Monster to our list
+
+
+for oMonster in monsterlist:
+    oMonster.move()
+
+
+
+
+
