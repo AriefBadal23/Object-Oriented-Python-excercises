@@ -67,4 +67,4 @@ while True:
     pygame.display.update()
 
     # Slow thing down a bit
-    clock.tick(FRAMERS_PER_SECOND)  # make pygame wait
+    clock.tick(FRAMERS_PER_SECOND)  # make pygame wait 
