@@ -1,4 +1,4 @@
-# pygame demo 4(a) - one image, move by keyboard
+# pygame demo 3(a) - one image, move by keyboard
 """ Small programs that allows to move the ball image using the keyboard """
 
 # Import packages
