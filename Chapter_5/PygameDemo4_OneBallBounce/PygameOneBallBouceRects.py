@@ -1,5 +1,4 @@
-# pygame demo 3(a) - one image, move by keyboard
-""" Small programs that allows to move the ball image using the keyboard """
+# pygame demo 4(b) - one image, bounce around the window using rects
 
 # Import packages
 import pygame
@@ -24,14 +23,12 @@ clock = pygame.time.Clock()
 # Load the assets: image(s), sound(s), etc.
 ball_Image = pygame.image.load('images/ball.png')
 
-
+ball_rect = ball_Image.get_rect()
 # Initialize the variables
 MAX_WIDTH = WINDOW_HEIGHT - BALL_WIDTH_HEIGHT
 MAX_HEIGHT = WINDOW_WIDTH - BALL_WIDTH_HEIGHT
-
-
-ball_X = random.randrange(MAX_WIDTH)
-ball_Y = random.randrange (MAX_HEIGHT)
+ball_rect.left = random.randrange(MAX_WIDTH)
+ball_rect.top = random.randrange(MAX_HEIGHT)
 x_Speed = N_PIXELS_PER_FRAME
 y_Speed = N_PIXELS_PER_FRAME
 
@@ -46,22 +43,22 @@ while True:
 
 
         # Do any "per frame" actions
-        if (ball_X < 0) or (ball_X >= MAX_WIDTH):
+        if (ball_rect.left < 0) or (ball_rect.right >= MAX_WIDTH):
             x_Speed = -x_Speed # reverse X direction
 
-        if (ball_Y < 0) or (ball_Y >= MAX_HEIGHT):
+        if (ball_rect.top < 0) or (ball_rect.bottom >= MAX_HEIGHT):
             y_Speed = -y_Speed # reverse Y direction
 
-        # Update the balls location, using the speed in two directions
-        ball_X = ball_X + x_Speed
-        ball_Y = ball_Y + y_Speed
+        # Update the balls rectangle, using the speed in two directions
+        ball_rect.left = ball_rect.left + x_Speed
+        ball_rect.top = ball_rect.top + y_Speed
         
 
     # Clear the window before drawing it again
     window.fill(BLACK)
 
     # Draw the window elements
-    window.blit(ball_Image, (ball_X, ball_Y))
+    window.blit(ball_Image, ball_rect)
 
    
     # Update the window
