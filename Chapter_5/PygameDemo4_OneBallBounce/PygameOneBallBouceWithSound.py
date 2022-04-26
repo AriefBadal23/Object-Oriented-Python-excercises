@@ -1,6 +1,6 @@
 # pygame demo 4(b) - one image, bounce around the window using rects with sound
 # Note: this excercise has a little bug; I get the following error message: pygame.error: Failed loading libmpg123-0.dll:
-# Import packages
+# Import packages 
 
 import pygame
 from pygame.locals import *
