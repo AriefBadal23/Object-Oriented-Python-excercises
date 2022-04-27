@@ -21,11 +21,11 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
-# Load the assets: image(s), sound(s), etc.
+# 4 Load the assets: image(s), sound(s), etc.
 ball_Image = pygame.image.load('images/ball.png')
 
 
-# Initialize the variables
+# 5 Initialize the variables
 MAX_WIDTH = WINDOW_HEIGHT - BALL_WIDTH_HEIGHT
 MAX_HEIGHT = WINDOW_WIDTH - BALL_WIDTH_HEIGHT
 
@@ -45,7 +45,7 @@ while True:
             sys.exit()
 
 
-        # Do any "per frame" actions
+        # 8 Do any "per frame" actions
         if (ball_X < 0) or (ball_X >= MAX_WIDTH):
             x_Speed = -x_Speed # reverse X direction
 
@@ -60,7 +60,7 @@ while True:
     # Clear the window before drawing it again
     window.fill(BLACK)
 
-    # Draw the window elements
+    # 10 Draw the window elements
     window.blit(ball_Image, (ball_X, ball_Y))
 
    

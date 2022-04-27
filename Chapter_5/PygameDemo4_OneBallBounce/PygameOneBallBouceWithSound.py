@@ -26,8 +26,9 @@ clock = pygame.time.Clock()
 mixer.init()
 ball_Image = pygame.image.load('images/ball.png')
 bounce_sound = pygame.mixer.Sound('sounds/boing.wav')
-mixer.music.load('sounds/background.mp3')
-mixer.music.play(-1, 0.0)
+# supports only mp3 files
+# mixer.music.load('sounds/boing.wav')
+# mixer.music.play(-1, 0.0)
 
 
 
