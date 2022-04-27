@@ -3,7 +3,7 @@
 # Use a "state machine" approach
 
 import pygame
-from pygame.locals import *
+from pygame.locals import * 
 
 class SimpleButton():
     # Used to track the state of the button
