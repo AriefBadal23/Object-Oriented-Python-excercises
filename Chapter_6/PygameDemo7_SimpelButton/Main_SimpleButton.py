@@ -10,7 +10,7 @@ import sys
 
 
 # 2 - Define constants
-GRAY = (200, 200, 200)
+GRAY = (200, 200, 200) 
 WINDOW_WIDTH = 400
 WINDOW_HEIGHT = 100
 FRAMES_PER_SECOND = 60
