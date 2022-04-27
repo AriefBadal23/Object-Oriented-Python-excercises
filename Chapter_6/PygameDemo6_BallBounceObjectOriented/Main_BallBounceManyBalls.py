@@ -19,7 +19,7 @@ N_BALLS = 3
 # Initialize the world
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-clock = pygame.time.Clock()
+clock = pygame.time.Clock() 
 
 # 5 Initialize the variables
 ball_list = []
