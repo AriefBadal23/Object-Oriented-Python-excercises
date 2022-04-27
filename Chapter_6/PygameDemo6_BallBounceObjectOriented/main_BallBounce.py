@@ -34,7 +34,7 @@ while True:
             sys.exit()
 
     # Update the balls location, using the speed in two directions
-    oBall.update()  # tell the Ball to update itself
+    oBall.update()  # tell the Ball to update itself 
 
     # Clear the window before drawing it again
     window.fill(BLACK)
