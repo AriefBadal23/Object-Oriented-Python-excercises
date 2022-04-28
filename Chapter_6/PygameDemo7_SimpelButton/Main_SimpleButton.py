@@ -1,7 +1,5 @@
 # pygame demo7 SimpeleButton test
 
-# pygame demo 0 - window only
-
 # 1 - Import packages
 import pygame
 from pygame.locals import *
