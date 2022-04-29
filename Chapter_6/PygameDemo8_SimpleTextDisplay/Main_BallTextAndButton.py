@@ -12,7 +12,7 @@ from SimpleButton import *
 
 # Define constants
 BLACK = (0, 0, 0)
-WHITE = (255,255,255)
+WHITE = (255, 255, 255)
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 400
 FRAMERS_PER_SECOND = 30
@@ -25,9 +25,13 @@ clock = pygame.time.Clock()
 
 # 5 Initialize the variables
 oBall = Ball(window, WINDOW_WIDTH, WINDOW_HEIGHT)
-oFrameCountLabel = SimpleText(window,(60,20), 'Programming has run through this many loops', WHITE)
-oFrameCountDisplay = SimpleText(window, (500,20),'',WHITE)
-ORestartButton = SimpleButton(window, (200, 60), 'images/restartUp.png', 'images/restartDown.png')
+oFrameCountLabel = SimpleText(
+    window, (60, 20), "Programming has run through this many loops", WHITE
+)
+oFrameCountDisplay = SimpleText(window, (500, 20), "", WHITE)
+ORestartButton = SimpleButton(
+    window, (200, 60), "images/restartUp.png", "images/restartDown.png"
+)
 frameCounter = 0
 
 # Loop forever
@@ -39,14 +43,13 @@ while True:
             pygame.quit()
             sys.exit()
         if ORestartButton.handleEvent(event):
-            frameCounter = 0 # clicked button, reset counter
-
+            frameCounter = 0  # clicked button, reset counter
 
     # Do any 'per frame' actions
-    oBall.update()  # tell the Ball to update itself 
-    frameCounter = frameCounter + 1 #increment each frame
+    oBall.update()  # tell the Ball to update itself
+    frameCounter = frameCounter + 1  # increment each frame
     oFrameCountDisplay.setValue(str(frameCounter))
-    
+
     # Clear the window before drawing it again
     window.fill(BLACK)
 
@@ -54,7 +57,6 @@ while True:
     oBall.draw()  # tell the Ball to draw itself
     oFrameCountDisplay.draw()
     ORestartButton.draw()
-
 
     # Update the window
     pygame.display.update()
