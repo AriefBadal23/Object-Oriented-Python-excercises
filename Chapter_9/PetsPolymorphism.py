@@ -37,5 +37,8 @@ oBird = Bird("Big Bird")
 pets_list = [oDog1, oDog2, oCat1, oCat2, oBird]
 
 
+
+# Loops through the list of pet objects and use the method speak, with different implementationn
+# A simple demonstration of Polymorphism
 for oPet in pets_list:
     oPet.speak()
