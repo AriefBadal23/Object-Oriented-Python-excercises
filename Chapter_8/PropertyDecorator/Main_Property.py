@@ -6,7 +6,7 @@ oStudent1 = Student('Joe Schmoe')
 oStudent2 = Student('Jane Smith')
 
 
-# get the stidents' grades using the 'grade' property and print
+# get the students' grades using the 'grade' property and print
 print(oStudent1.grade)
 print(oStudent2.grade)
 print()
