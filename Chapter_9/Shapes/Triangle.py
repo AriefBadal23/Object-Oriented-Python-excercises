@@ -42,6 +42,9 @@ class Triangle():
             return False
 
     
+    def get_type(self):
+        return self.shape_type
+
 
     def get_area(self):
         the_area = 5 * self.width * self.height
@@ -51,5 +54,5 @@ class Triangle():
     def draw(self):
         pygame.draw.polygon(self.window, self.color,
                             ((self.x, self.y + self.height),
-                            (self.x, self.y)
+                            (self.x, self.y),
                             (self.x + self.width, self.y)))
