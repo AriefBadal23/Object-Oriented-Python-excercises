@@ -30,9 +30,5 @@ class Square():
         the_area = self.width_and_height * self.width_and_height
         return the_area
 
-    def area(self):
-        pygame.draw.rect(self.window, self.color, (self.x, self.y, self.width_and_height, self.width_and_height))
-
-
     def draw(self):
         pygame.draw.rect(self.window, self.color, self.x, self.y, self.width_and_height, self.width_and_height)
