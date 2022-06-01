@@ -9,9 +9,10 @@ BLUE = (0,0,255)
 
 class Rectangle():
     def __init__(self, window):
-        self.window = random.choice((20, 30, 40))
+        self.window = window
+        self.height = random.choice((20, 30, 40))
         self.width = random.choice((20, 30, 40))
-        self.height = random.choice((RED, GREEN, BLUE))
+        self.color = ((RED, GREEN, BLUE))
         self.x = random.randrange(0, 400)
         self.y = random.randrange(0, 400)
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
