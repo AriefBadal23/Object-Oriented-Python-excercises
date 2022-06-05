@@ -1,4 +1,5 @@
 class Account():
+    """ Account class for the Bank system to do basic bank account operations"""
     def __init__(self, name, balance, password):
         self.name = name
         self.balance = balance
@@ -33,8 +34,6 @@ class Account():
 
 
         
-
-
 p = Account('Arief', 2000, 'Kip123')
 # p.deposit('Kip123',2000)
 # p.withdraw('Kip123',2000)
