@@ -34,6 +34,9 @@ print(p.create_account('Arief', 400, 'password123'))
 p2 = Bank()
 p2.create_account('John', 2000, 'password123')
 
+p3 = Bank()
+p3.create_account('Marieke', 2000, 'password123')
+
 
 
         
