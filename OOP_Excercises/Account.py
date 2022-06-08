@@ -32,11 +32,3 @@ class Account():
     def show(self):
         print (f'Your name is {self.name}, password {self.password} and balance {self.balance}')
 
-
-        
-p = Account('Arief', 2000, 'Kip123')
-# p.deposit('Kip123',2000)
-# p.withdraw('Kip123',2000)
-print(p.get_balance('Kip123'))
-p.show()
-
