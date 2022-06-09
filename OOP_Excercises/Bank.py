@@ -36,3 +36,7 @@ print(Person1.open_account())
 Person2 = Bank()
 
 print(Person2.open_account())
+
+
+Person3 = Bank()
+print(Person3.open_account())
