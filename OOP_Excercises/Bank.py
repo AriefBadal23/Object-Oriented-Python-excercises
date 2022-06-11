@@ -1,21 +1,17 @@
 from Account import *
 
 class Bank():
-    next_account_number = 0
     def __init__(self):
         self.accountdict = {}
-        Bank.next_account_number += 1
+        self.next_account_number = 0
 
 
     def create_account(self, name, start_balance, password):
-        oAccount = Account(name, start_balance, password)
-        new_account_number = self.next_account_number
-        self.accountdict[new_account_number] = oAccount
-        return new_account_number
-
+        """ Method to create a new Bank account """
+        
 
     def open_account(self):
-        """ Method  that first asks the user the required details and passing this as parameters to the create_account method """
+        """ Method to open a specific Bank account """
         print('**Open a account**')
         username = input('What is your name? ')
         start_balance = input('What is the start balance? ')
@@ -25,18 +21,17 @@ class Bank():
         print('Your new account number is:', user_account_number)
 
     def close_account(self):
+        """ Method to close a specific Bank account """
         pass
 
 
 
-Person1 = Bank()
-
-print(Person1.open_account())
-
-Person2 = Bank()
-
-print(Person2.open_account())
-
-
-Person3 = Bank()
-print(Person3.open_account())
+    def show_balance(self):
+        """ Method to show the balance of a specif Bank account  """
+        pass
+        
+        
+A = Bank()
+A.open_account()
+B = Bank()
+B.open_account()
