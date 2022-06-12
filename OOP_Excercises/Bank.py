@@ -13,7 +13,6 @@ class Bank():
         new_account_number = self.next_account_number
         self.accountdict[new_account_number] = oAccount
         self.next_account_number = self.next_account_number + 1
-        print(self.accountdict)
         return new_account_number
 
       
@@ -29,16 +28,15 @@ class Bank():
 
     def close_account(self):
         """ Method to close a specific Bank account """
-        pass
+        account_number = input('What is the account number? ')
+        print('The remaining balance will be returned')
+        del self.accountdict[int(account_number)]
 
 
 
     def show_balance(self):
         """ Method to show the balance of a specif Bank account  """
         # ask account_number & ask password
-        pass  
+        pass
         
-A = Bank()
-account1 = A.create_account('Arief', 10000,'123' )
-A.show_balance()
 
