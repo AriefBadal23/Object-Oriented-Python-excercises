@@ -1,3 +1,4 @@
+from stringprep import in_table_a1
 from Account import *
 
 class Bank():
@@ -8,8 +9,14 @@ class Bank():
 
     def create_account(self, name, start_balance, password):
         """ Method to create a new Bank account """
-        
+        oAccount = Account(name, start_balance, password)
+        new_account_number = self.next_account_number
+        self.accountdict[new_account_number] = oAccount
+        self.next_account_number = self.next_account_number + 1
+        print(self.accountdict)
+        return new_account_number
 
+      
     def open_account(self):
         """ Method to open a specific Bank account """
         print('**Open a account**')
@@ -28,10 +35,10 @@ class Bank():
 
     def show_balance(self):
         """ Method to show the balance of a specif Bank account  """
-        pass
-        
+        # ask account_number & ask password
+        pass  
         
 A = Bank()
-A.open_account()
-B = Bank()
-B.open_account()
+account1 = A.create_account('Arief', 10000,'123' )
+A.show_balance()
+
