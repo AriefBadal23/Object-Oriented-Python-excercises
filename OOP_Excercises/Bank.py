@@ -1,4 +1,3 @@
-from stringprep import in_table_a1
 from Account import *
 
 class Bank():
@@ -37,6 +36,20 @@ class Bank():
     def show_balance(self):
         """ Method to show the balance of a specif Bank account  """
         # ask account_number & ask password
-        pass
+        account_number = input('What is the account number? ')
+        account_number = int(account_number)
+        password = input('What is your password')
+        Account.get_balance(self.accountdict[account_number], password)
+
         
+    def desposit(self):
+        pass
+
+
+    def withdraw(self):
+        pass
+
+
+    def show(self):
+        pass
 
