@@ -43,7 +43,12 @@ class Bank():
 
         
     def desposit(self):
-        pass
+        account_number = input('What is the account number? ')
+        account_number = int(account_number)
+        password = input('What is your password')
+        deposit_amount = input('What is the amount you want to deposit? ')
+        deposit_amount = int(deposit_amount)
+        Account.deposit(self.accountdict[account_number], password, deposit_amount)
 
 
     def withdraw(self):
