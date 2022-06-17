@@ -10,14 +10,14 @@ class Account():
             print('Wrong password please enter you password again')
         else:
             self.balance = self.balance + deposit_amount
-            return self.balance
+            print (self.balance)
     
     def withdraw(self, password, withdraw_amount):
         if password != self.password:
             print('Wrong password please enter you password again')
         else:
             self.balance = self.balance - withdraw_amount
-            return f'your current balance is: {self.balance}'
+            print (f'your current balance is: {self.balance}')
 
 
     def get_balance(self, password):
@@ -25,6 +25,8 @@ class Account():
             print('Wrong password please enter you password again')
         else:
             print (f'Hi {self.name}, your current balance is: {self.balance}')
+
+
 
 
 
@@ -36,4 +38,4 @@ class Account():
 
 
 # Account1 = Account('Arief',40000, '1234')
-# Account1.get_balance('1234')
+# Account1.deposit('1234', 40)
