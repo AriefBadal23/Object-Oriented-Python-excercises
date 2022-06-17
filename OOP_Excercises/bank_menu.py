@@ -26,7 +26,7 @@ while True:
         oBank.open_account()
 
     # show the balance of the user
-    elif user_input == 'b':
+    elif user_input == 's':
         oBank.show_balance()
 
     elif user_input == 'd':
