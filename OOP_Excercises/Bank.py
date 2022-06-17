@@ -1,6 +1,7 @@
 from Account import *
 
 class Bank():
+    """ A Bank class with all the functionality  for a customer with a bank account """
     def __init__(self):
         self.accountdict = {}
         self.next_account_number = 0
@@ -38,23 +39,26 @@ class Bank():
         # ask account_number & ask password
         account_number = input('What is the account number? ')
         account_number = int(account_number)
-        password = input('What is your password')
+        password = input('What is your password? ')
         Account.get_balance(self.accountdict[account_number], password)
 
         
     def desposit(self):
+        """ Method to deposit money in the bank account """
         account_number = input('What is the account number? ')
         account_number = int(account_number)
-        password = input('What is your password')
+        password = input('What is your password? ')
         deposit_amount = input('What is the amount you want to deposit? ')
         deposit_amount = int(deposit_amount)
         Account.deposit(self.accountdict[account_number], password, deposit_amount)
 
 
     def withdraw(self):
-        pass
-
-
-    def show(self):
-        pass
+        """ Method to withdraw money of the bank account """
+        account_number = input('What is the account number? ')
+        account_number = int(account_number)
+        password = input('What is your password? ')
+        withdraw_amount = input('What is the amount you want to withdraw? ')
+        withdraw_amount = int(withdraw_amount)
+        Account.withdraw(self.accountdict[account_number], password, withdraw_amount)
 
