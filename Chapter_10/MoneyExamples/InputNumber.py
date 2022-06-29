@@ -2,7 +2,6 @@
 # 
 #  Demo of Inheritance
 
-from unittest import result
 import pygame
 from pygame.locals import *
 import pygwidgets
@@ -10,8 +9,8 @@ import pygwidgets
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 # Tuple of legal editing keys
-LEGAL_KEYS_TUPLE = (pygame.K_RIGHT, pygame.KLEFT, pygame.K_HOME,
-                    pygame.K_END, pygame.K_DELETE, pygame.K_BAKCSPACE,
+LEGAL_KEYS_TUPLE = (pygame.K_RIGHT, pygame.K_LEFT, pygame.K_HOME,
+                    pygame.K_END, pygame.K_DELETE, pygame.K_BACKSPACE,
                     pygame.K_RETURN, pygame.K_KP_ENTER)
 
 # Legal keys to be typed
@@ -28,7 +27,7 @@ class InputNumber(pygwidgets.InputText):
                 font_size=24, width=200, text_color=BLACK,
                 background_color= WHITE, focus_color=BLACK,
                 initial_focus= False, nick_name=None, callback=None,
-                mask=None, keep_focus_onsubmit=False,
+                mask=None, keepFocusonSubmit=False,
                 # new parameters added
                 allow_floating_number=True, allow_negative_number= True):
         self.allow_floating_number = allow_floating_number
@@ -38,7 +37,7 @@ class InputNumber(pygwidgets.InputText):
         super().__init__(window, loc, value, font_name, font_size,
         width, text_color, background_color, focus_color,
         initial_focus, nick_name, callback,
-        mask, keep_focus_onsubmit)
+        mask, keepFocusonSubmit)
 
     def handleEvent(self, event):
         if (event.type == pygame.KEYDOWN):
