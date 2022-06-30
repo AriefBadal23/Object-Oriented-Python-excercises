@@ -3,8 +3,6 @@
 # Demonstrates overriding inherited DisplayText and InputText method
 
 # 1 - Import Packages
-from doctest import OutputChecker
-from turtle import width
 import pygame
 from pygame.locals import *
 import sys
@@ -30,7 +28,6 @@ window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
 clock = pygame.time.Clock()
 
 # 4 - Load assets: image(s), sounds, etc.
-
 title = pygwidgets.DisplayText(window, (0, 40),
         'Demo of InputNumber and DisplayMoney fields',
         fontSize=36, width=WINDOW_WIDTH, justified='center')
@@ -38,6 +35,7 @@ title = pygwidgets.DisplayText(window, (0, 40),
 input_caption = pygwidgets.DisplayText(window, (20, 150),
                 'Input money amount', fontSize=24,
                 width=190, justified='right')
+
 inputField = InputNumber(window, (230, 150), '', width=150, initial_focus=True) 
 ok_button = pygwidgets.TextButton(window, (430, 150), 'OK')
 
@@ -45,12 +43,14 @@ ok_button = pygwidgets.TextButton(window, (430, 150), 'OK')
 ouput_caption_1 = pygwidgets.DisplayText(window, (20, 300),
                     'Output dollars & cents:', fontSize=24,
                     width=190, justified='right')
+
 money_field1 = DisplayMoney(window, (230, 300), '', textColor=BLACK,
                 backgroundColor=WHITE, width=150)
 
 ouput_caption_2 = pygwidgets.DisplayText(window, (20, 400),
                     'Output dollars only:', fontSize=24,
                     width=190, justified='right')
+
 money_field2 = DisplayMoney(window, (230, 400), '', textColor=BLACK,
                 backgroundColor=WHITE, width=150,
                 showCents=False)
@@ -61,7 +61,6 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-
 
         if inputField.handleEvent(event) or ok_button.handleEvent(event):
             try:

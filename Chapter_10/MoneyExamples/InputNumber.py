@@ -21,14 +21,13 @@ LEGAL_UNICODE_CHARS = ('0123456789')
 # 
 
 class InputNumber(pygwidgets.InputText):
-    """ Override the methods by inheriting of pygwidgets """
-
+    # """ Override the methods by inheriting of pygwidgets """
     def __init__(self, window, loc, value='', font_name=None,
                 font_size=24, width=200, text_color=BLACK,
                 background_color= WHITE, focus_color=BLACK,
                 initial_focus= False, nick_name=None, callback=None,
                 mask=None, keepFocusonSubmit=False,
-                # new parameters added
+                # New parameters added
                 allow_floating_number=True, allow_negative_number= True):
         self.allow_floating_number = allow_floating_number
         self.allow_negative_number = allow_negative_number
@@ -39,6 +38,7 @@ class InputNumber(pygwidgets.InputText):
         initial_focus, nick_name, callback,
         mask, keepFocusonSubmit)
 
+    # Override hanleEvent so we can fileter for proper keys
     def handleEvent(self, event):
         if (event.type == pygame.KEYDOWN):
             # if it's not an editing or numeric key ignore it
@@ -48,21 +48,21 @@ class InputNumber(pygwidgets.InputText):
             if not allowed_key:
                 return False
 
-            if event.unicode == '-':
+            if event.unicode == '-': # user typed a minus sign
                 if not self.allow_negative_number:
                     # if no negatives, dont pass through
                     return False
                 if self.cursorPosition > 0:
                     return False # can't put minus sign after 1st char
                 if '_' in self.text:
-                    return False
+                    return False # can't enter minus sign
 
 
             if event.unicode == '.':
                 if not self.allow_floating_number:
                     # if no floats, dont pass the periode through
                     return False
-                if '.' in self.text: # cant enter a second period
+                if '.' in self.text:
                     return False #cant enter a second period
 
             # Allow the key to go through to the base class
