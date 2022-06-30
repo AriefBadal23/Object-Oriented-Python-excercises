@@ -38,7 +38,7 @@ title = pygwidgets.DisplayText(window, (0, 40),
 input_caption = pygwidgets.DisplayText(window, (20, 150),
                 'Input money amount', fontSize=24,
                 width=190, justified='right')
-inputField = InputNumber(window, (230, 150), '', width=150, initial_focus=True) # fix bug
+inputField = InputNumber(window, (230, 150), '', width=150, initial_focus=True) 
 ok_button = pygwidgets.TextButton(window, (430, 150), 'OK')
 
 
@@ -49,11 +49,11 @@ money_field1 = DisplayMoney(window, (230, 300), '', textColor=BLACK,
                 backgroundColor=WHITE, width=150)
 
 ouput_caption_2 = pygwidgets.DisplayText(window, (20, 400),
-                    'Output dollars & cents:', fontSize=24,
+                    'Output dollars only:', fontSize=24,
                     width=190, justified='right')
-money_field2 = DisplayMoney(window, (230, 300), '', textColor=BLACK,
+money_field2 = DisplayMoney(window, (230, 400), '', textColor=BLACK,
                 backgroundColor=WHITE, width=150,
-                ShowCents=False)
+                showCents=False)
 
 
 while True:

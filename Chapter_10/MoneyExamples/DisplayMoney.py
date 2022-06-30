@@ -2,7 +2,6 @@
 
 # Demo of inheritance
 
-from calendar import monthcalendar
 import pygwidgets
 
 BLACK = (0,0,0)
@@ -13,11 +12,11 @@ class DisplayMoney(pygwidgets.DisplayText):
                  fontName=None, fontSize=24, width=150,
                  height=None, textColor=BLACK, backgroundColor=None,
                  justified='left', nickname=None, currencySymbol='$',
-                 currencySymbolOnLeft=True, ShowCents=True):
+                 currencySymbolOnLeft=True, showCents=True):
 
         self.currencySymbol = currencySymbol
         self.currencySymbolOnLeft = currencySymbolOnLeft
-        self.showCents = ShowCents
+        self.showCents = showCents
         if value is None:
             value = 0.00
 
@@ -27,20 +26,21 @@ class DisplayMoney(pygwidgets.DisplayText):
                          width, height, textColor, backgroundColor,
                          justified, nickname)    
 
-        def setValue(self, money):
-            if money == '':
-                money = 0.00
-            
-            money = float(money)
+    def setValue(self, money):
+        if money == '':
+            money = 0.00
+        
+        money = float(money)
 
-            if self.showCents:
-                money = '{:.2f}'.format(money)
-            else:
-                money = '{:,.0f}'.format(money)
-            if self.currencySymbolOnLeft:
-                theText = self.currencySymbol + money
-            else:
-                theText = money + self.currencySymbol
+        if self.showCents:
+            money = '{:,.2f}'.format(money)
+        else:
+            money = '{:,.0f}'.format(money)
 
-            # Call the setValue method of our base class
-            super().setValue(theText)
+        if self.currencySymbolOnLeft:
+            theText = self.currencySymbol + money
+        else:
+            theText = money + self.currencySymbol
+
+        # Call the setValue method of our base class
+        super().setValue(theText)
