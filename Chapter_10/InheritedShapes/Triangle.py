@@ -1,6 +1,4 @@
-from curses import mouseinterval
-from turtle import window_height
-from ShapeBasic import Shape
+from Shape import *
 import random
 import pygame
 
@@ -39,3 +37,6 @@ class Triangle(Shape):
             (self.x, self.y + self.height),
             (self.x, self.y),
             (self.x + self.width, self.y)))
+
+
+# BUG OPLOSSEN

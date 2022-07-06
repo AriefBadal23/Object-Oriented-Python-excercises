@@ -1,4 +1,4 @@
-from ShapeBasic import Shape
+from Shape import *
 import random
 import pygame
 
@@ -12,7 +12,7 @@ class Square(Shape):
         clicked = self.rect.collidepoint(mouse_point)
         return clicked
 
-    def get_area(self, mouse_point):
+    def get_area(self):
         the_area= self.width_and_height * self.width_and_height
         return the_area
 

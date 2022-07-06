@@ -1,4 +1,4 @@
-from ShapeBasic import Shape
+from Shape import *
 import random
 import pygame
 import math
@@ -26,3 +26,5 @@ class Circle(Shape):
 
     def draw(self):
         pygame.draw.circle(self.window, self.color, (self.center_y, self.center_x), self.radius, 0)
+
+        
