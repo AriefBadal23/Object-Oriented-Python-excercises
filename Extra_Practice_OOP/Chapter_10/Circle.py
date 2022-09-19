@@ -12,7 +12,7 @@ class Circle(Shape):
         self.radius = random.randrange(10,50)
         self.center_y = self.y_position + self.radius
         self.center_x = self.x_position + self.radius
-        self.rect = pygame.Rect(self.x_position, self.radius * 2, self.radius * 2)
+        self.rect = pygame.Rect(self.x_position, self.y_position, self.radius * 2, self.radius * 2)
 
     def clicked_inside(self, mouse_point):
         """ Check if the user has clicked inside the circle and returns a boolean value """

@@ -25,5 +25,6 @@ class Square(Shape):
 
     def draw(self):
         """ Draws the shape on the surface  """
-        pygame.draw.rect(self.window, self.color, (self.x_position, self.y_position,
-                                                   self.width_and_height, self.width_and_height))
+        pygame.draw.rect(self.window, self.color, (self.x_position, self.y_position + self.height),
+                                                  (self.x_position, self.y_position),
+                                                   self.width_and_height, self.width_and_height)
