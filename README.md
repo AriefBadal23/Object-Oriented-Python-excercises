@@ -9,7 +9,7 @@ These excercises helped me more to understand the 4 Pilars of OOP:
 - Inheritence
 - Encapsulation
 
-By creating games with the Python library *Pygame* and Gui's with pyGui.
+By creating games with the Python library *Pygame* and Gui's with pygwidgets.
 
 
 
