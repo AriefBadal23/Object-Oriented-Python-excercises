@@ -1,9 +1,9 @@
-.vscode/settings.json
 myenv/
 Chapter_4/__pycache__/Account.cpython-39.pyc
 __pycache__/
 Chapter_8/Stack/file_two.py
 Chapter_8/Stack/file_one.py
 OOP_Excercises/OOP.py
-OOP_Excercises/aantekeningen
 /.vscode
+OOP_Excercises/aantekeningen.md
+OOP_Excercises/.vscode/settings.json
