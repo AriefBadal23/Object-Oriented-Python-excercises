@@ -12,8 +12,8 @@ from balloonconstants import *
 BLACK = (0,0,0)
 # set up the constants
 GRAY = (200, 200, 200)
-WINDOW_WIDTH = 640
-WINDOW_HEIGHT = 480
+WINDOW_WIDTH = 600
+WINDOW_HEIGHT = 600
 PANEL_HEIGHT = 60
 USABLE_WINDOW_HEIGHT = WINDOW_HEIGHT - PANEL_HEIGHT
 FRAMES_PER_SECOND = 30
@@ -32,7 +32,7 @@ oScoreDisplay = pygwidgets.DisplayText(window, (10, USABLE_WINDOW_HEIGHT + 25),
                                         width=140,
                                         fontSize=24)
 
-oStatusDisplay = pygwidgets.DisplayText(window, (10, USABLE_WINDOW_HEIGHT + 25), '',
+oStatusDisplay = pygwidgets.DisplayText(window, (100, USABLE_WINDOW_HEIGHT + 25), '',
                                                  textColor=BLACK, backgroundColor=None)
 
 
@@ -63,8 +63,8 @@ while True:
 
     if playing:
         oballoon_manager.update()
-        n_popped = oballoon_manager.get_count()
-        n_missed = oballoon_manager.get_count()
+        n_popped = oballoon_manager.get_count_popped()
+        n_missed = oballoon_manager.get_count_missed()
         oStatusDisplay.setValue('Popped: ' + str(n_popped) +
                                 ' Missed: ' + str(n_missed) +
                                 'Out of: ' + str(N_BALLOONS))

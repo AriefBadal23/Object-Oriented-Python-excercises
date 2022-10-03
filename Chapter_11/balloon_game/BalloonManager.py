@@ -53,7 +53,10 @@ class BalloonManager():
     def get_score(self):
         return self.score
 
-    def get_count(self):
+    def get_count_popped(self):
+        return self.n_popped
+
+    def get_count_missed(self):
         return self.n_missed
 
     def draw(self):
