@@ -4,20 +4,25 @@ import pygame
 import random
 from Balloon import Balloon_large, Balloon_medium, Balloon_small
 
-from Chapter_11.balloon_game.balloonconstants import BALLOONS_MISSED, N_BALLOONS
+from balloonconstants import BALLOONS_MISSED, N_BALLOONS
 
-class Balloon_mgr():
+class BalloonManager():
     def __init__(self, window, max_width, max_height):
         self.window = window
         self.max_width = max_width
         self.max_height = max_height
 
     def start(self):
+        """ Resets the count of popped balloons and the count of missed balloons
+            I also creates new balloons.
+        """
         self.balloon_list = []
         self.n_popped = 0
         self.n_missed = 0
-    
+        self.score = 0
+
         for balloon_num  in range(0, N_BALLOONS):
+            
             random_balloon_class = random.choice((Balloon_small, Balloon_medium, Balloon_large))
             o_balloon = random_balloon_class(self.window, self.max_width, self.max_height, balloon_num)
             self.balloon_list.append(o_balloon)
@@ -36,6 +41,7 @@ class Balloon_mgr():
         
         
     def update(self):
+        """ Checks if a particular balloon has been clicked (popped) """
         for o_balloon in self.balloon_list:
             status = o_balloon.update()
             if status == BALLOONS_MISSED:

@@ -27,17 +27,17 @@ class Balloon(ABC):
                     Balloon.pop_sound_loaded = True
                     Balloon.pop_sound = pygame.mixer.Sound('sounds/Balloonpop.wav')
 
-                balloon_rect = self.balloon_image.get_rect()
+                balloon_rect = self.balloon_image.getRect()
                 self.width = balloon_rect.width
                 self.height = balloon_rect.height
                 # Positions so balloon is within the width of the window
                 # but below the bottom
 
-                self.x = random.randrange(max_width, self.width)
+                self.x = random.randrange(max_width - self.width)
                 self.y = random.randrange(75)
                 self.balloon_image.setLoc((self.x, self.y))
 
-    def click_inside(self, mousepoint):
+    def clicked_inside(self, mousepoint):
         my_rect = pygame.Rect(self.x, self.y, self.width, self.height)
         if my_rect.collidepoint(mousepoint):
             Balloon.pop_sound.play()
@@ -63,22 +63,22 @@ class Balloon(ABC):
 
 
 class Balloon_small(Balloon):
-    balloon_image = pygame.image.load('images/red_balloon_small.png')
+    balloon_image = pygame.image.load('images/redBalloonSmall.png')
     def __init__(self, window, max_width, max_height, id):
-        o_image = pygwidgets.Image(window, (0,0), Balloon_small.balloon_image)
-        super().__init__(window, max_width, max_height, id, o_image, 'Small', 30, 3.1)
+        oimage = pygwidgets.Image(window, (0,0), Balloon_small.balloon_image)
+        super().__init__(window, max_width, max_height, id, oimage, 'Small', 30, 3.1)
 
 class Balloon_medium(Balloon):
-    balloon_image = pygame.image.load('images/red_balloon_medium.png')
+    balloon_image = pygame.image.load('images/redBalloonMedium.png')
     def __init__(self, window, max_width, max_height, id):
-        o_image = pygwidgets.Image(window, (0,0), Balloon_medium.balloon_image)
-        super().__init__(window, max_width, max_height, id, o_image, 'Small', 20, 2.2)
+        oimage = pygwidgets.Image(window, (0,0), Balloon_medium.balloon_image)
+        super().__init__(window, max_width, max_height, id, oimage, 'Small', 20, 2.2)
 
 class Balloon_large(Balloon):
-    balloon_image = pygame.image.load('images/red_balloon_large.png')
+    balloon_image = pygame.image.load('images/redBalloonLarge.png')
     def __init__(self, window, max_width, max_height, id):
-        o_image = pygwidgets.Image(window, (0,0), Balloon_large.balloon_image)
-        super().__init__(window, max_width, max_height, id, o_image, 'Small', 10, 1.5)
+        oimage = pygwidgets.Image(window, (0,0), Balloon_large.balloon_image)
+        super().__init__(window, max_width, max_height, id, oimage, 'Small', 10, 1.5)
 
 
 
