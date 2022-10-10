@@ -65,9 +65,9 @@ while True:
         oballoon_manager.update()
         n_popped = oballoon_manager.get_count_popped()
         n_missed = oballoon_manager.get_count_missed()
-        oStatusDisplay.setValue('Popped: ' + str(n_popped) +
-                                ' Missed: ' + str(n_missed) +
-                                'Out of: ' + str(N_BALLOONS))
+        oStatusDisplay.setValue('Popped: ' + str(n_popped) + 
+                                ' Missed: ' + str(n_missed) + 
+                                ' Out of: ' + str(N_BALLOONS))
 
         if (n_popped + n_missed) == N_BALLOONS:
             playing = False
