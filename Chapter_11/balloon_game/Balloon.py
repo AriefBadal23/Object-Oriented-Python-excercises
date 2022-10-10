@@ -34,7 +34,7 @@ class Balloon(ABC):
                 # but below the bottom
 
                 self.x = random.randrange(max_width - self.width)
-                self.y = random.randrange(75)
+                self.y = random.randrange(500)
                 self.balloon_image.setLoc((self.x, self.y))
 
     def clicked_inside(self, mousepoint):
